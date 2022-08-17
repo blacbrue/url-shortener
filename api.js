@@ -43,6 +43,7 @@ module.exports = (app, consola, db) => {
             })
 
             res.send({ code: code })
+            consola.info(`New code created: ${code} (${url.href})`)
         }
     })
 
