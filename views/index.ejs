@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <div class="main mt-3 ms-3">
+        <h1 class="ms-1 mb-3">URL Shortener</h1>
+
+        <p class="ms-1 me-3">Note: The website will perform a daily check for the status of the shortened URL. If the URL
+            (source) doesn't exist, the shortened URL will be deleted</p>
+
+        <form action="" id="su-form">
+            <div class="form-group me-3 ms-1">
+                <label for="url" class="mb-2" id="label-url">URL</label>
+                <input type="text" class="form-control" id="url" name="url" placeholder="Enter URL">
+                <input type="text" class="form-control" id="shortened-url" style="display: none;" name="url"
+                    placeholder="Enter URL" readonly>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary ms-1" id="shorten-url-btn" style="display: block;">Shorten
+                URL</button>
+            <button class="btn btn-primary ms-1" id="shortening-spinner" type="button" style="display: none;" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Shortening...
+            </button>
+
+            <div class="btn-toolbar">
+                <button class="btn btn-primary ms-1 me-1" id="copy-link" style="display: none;">Copy URL</button>
+                <button class="btn btn-primary ms-1" id="reload" style="display: none;">Shorten Again</button>
+            </div>
+        </form>
+
+        <br>
+
+        <p class="ms-1 mt-2">If there are any problems with the website, please create a GitHub issue <a target="_blank" href="https://github.com/sakamatasimp/url-shortener/issues">here</a></p>
+        <a href="https://github.com/sakamatasimp/url-shortener" class="ms-1" target="_blank">Source Code</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+    <script src="/scripts/index.js"></script>
+
+</body>
+
+</html>
